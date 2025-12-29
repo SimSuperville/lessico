@@ -58,7 +58,7 @@ export function SearchBar({ placeholder = 'Search...', value, onChange }: Search
         value={localValue}
         onChange={(e) => setLocalValue(e.target.value)}
         placeholder={placeholder}
-        className="vintage-input block w-full py-3 pl-12 pr-12 text-base rounded-md"
+        className="vintage-input block w-full py-3 pl-14 pr-12 text-base rounded-md"
       />
 
       {/* Clear Button */}

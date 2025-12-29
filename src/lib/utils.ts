@@ -1,5 +1,3 @@
-import { ClarifyingQuestion } from '@/types';
-
 /**
  * Copy text to clipboard with fallback for older browsers
  */
@@ -26,48 +24,6 @@ export async function copyToClipboard(text: string): Promise<boolean> {
       document.body.removeChild(textArea);
     }
   }
-}
-
-/**
- * Build a personalized command/prompt from answers to clarifying questions
- */
-export function buildPersonalizedCommand(
-  baseCommand: string,
-  questions: ClarifyingQuestion[],
-  answers: Record<string, string>
-): string {
-  let result = baseCommand;
-  const contextParts: string[] = [];
-
-  for (const q of questions) {
-    const answer = answers[q.key]?.trim();
-    if (answer) {
-      switch (q.key) {
-        case 'project_type':
-          contextParts.push(`This is a ${answer}.`);
-          break;
-        case 'tech_stack':
-          contextParts.push(`We use ${answer}.`);
-          break;
-        case 'language':
-          contextParts.push(`Primary language is ${answer}.`);
-          break;
-        case 'conventions':
-        case 'context':
-        case 'additional_context':
-          contextParts.push(answer);
-          break;
-        default:
-          contextParts.push(answer);
-      }
-    }
-  }
-
-  if (contextParts.length > 0) {
-    result += '\n' + contextParts.join(' ');
-  }
-
-  return result;
 }
 
 /**

@@ -22,7 +22,7 @@ const MOCK_CHEATSHEETS: Cheatsheet[] = [
 
 | Command | What it does |
 |---------|-------------|
-| \`/init\` | Initialize project understanding |
+| \`/init\` | Initialise project understanding |
 | \`/help\` | Get help on commands |
 | \`/compact\` | Compress conversation history |
 | \`/clear\` | Start a fresh conversation |
@@ -133,8 +133,8 @@ Here's the UserList component:
 
 ## Systematic Debugging
 
-1. **Describe the expected behavior**
-2. **Describe the actual behavior**
+1. **Describe the expected behaviour**
+2. **Describe the actual behaviour**
 3. **Share relevant code**
 4. **Share any error messages**
 

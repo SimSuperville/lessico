@@ -119,7 +119,6 @@ export function ResourceDetailModal({
             {/* Clarifying Questions Toggle */}
             <ClarifyingToggle
               baseContent={baseContent}
-              questions={resource.clarifying_questions}
               resourceType={resourceType}
               onCopy={onCopy}
             />

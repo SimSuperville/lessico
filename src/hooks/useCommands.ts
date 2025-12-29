@@ -10,7 +10,7 @@ const MOCK_COMMANDS: Command[] = [
     id: '1',
     name: '/init',
     subtitle: 'Set up project context',
-    description: "Initialize Claude Code's understanding of your project. Run this first in any new codebase to help Claude understand the project structure, tech stack, and conventions.",
+    description: "Initialise Claude Code's understanding of your project. Run this first in any new codebase to help Claude understand the project structure, tech stack, and conventions.",
     usage_example: '/init',
     category: 'Getting Started',
     clarifying_questions: [

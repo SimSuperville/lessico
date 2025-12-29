@@ -10,7 +10,7 @@ interface ResourceCardProps {
   onCopy: () => void;
 }
 
-// Category color mapping - Vintage burgundy/cream palette
+// Category colour mapping - Vintage burgundy/cream palette
 const categoryColors: Record<string, string> = {
   'Getting Started': 'text-[#6B8E23] border-[#6B8E23]',  // Olive green
   'Code Writing': 'text-[#4682B4] border-[#4682B4]',      // Steel blue
@@ -72,22 +72,12 @@ export function ResourceCard({ resource, onClick, onCopy }: ResourceCardProps) {
       </button>
 
       {/* Bottom Section */}
-      <div className="mt-5 pt-4 border-t border-[var(--cream-border)] flex items-center justify-between">
+      <div className="mt-5 pt-4 border-t border-[var(--cream-border)] flex items-center justify-start">
         <CopyButton
           text={contentToCopy}
           onCopy={onCopy}
           size="sm"
         />
-
-        {/* Personalization indicator */}
-        {resource.clarifying_questions && resource.clarifying_questions.length > 0 && (
-          <span className="flex items-center gap-1.5 text-xs text-[var(--burgundy-light)] font-[family-name:var(--font-accent)] font-medium">
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
-            </svg>
-            Personalizable
-          </span>
-        )}
       </div>
     </div>
   );
